@@ -1,9 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { shallow } from 'enzyme';
+
 import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+fdescribe('App component', () => {
+  it('renders without crashing', () => {
+    const wrapper = shallow(<App/>);
+    const text = wrapper.find('h3').text();
+    console.log(text);
+    expect(text).toContain('Todo app + React + Redux');
+  });
 });

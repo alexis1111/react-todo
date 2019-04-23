@@ -4,7 +4,7 @@
 
 # Todo app with React 16 + Redux
 
-This project is a small test with React 16 and Redux, nothing fancy
+This project is a small test using create-react-app and Redux, nothing fancy
 
 ## Available Scripts
 
