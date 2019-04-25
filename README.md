@@ -1,7 +1,5 @@
 ![](https://github.com/alexis1111/react-todo/blob/master/public/ng-todo.gif)
 
-[![Build Status](https://travis-ci.org/alexis1111/react-todo.png?branch=master)](https://travis-ci.org/alexis1111/ng-todo)
-
 # Todo app with React 16 + Redux
 
 This project is a small test using create-react-app and Redux, nothing fancy
