@@ -1,4 +1,4 @@
-import { ADD_TASK, COMPLETE_TASK, DELETE_TASK } from './../actions/index';
+import * as ActionTypes from './../actions/index';
 
 const initialState = {
   tasks: [
@@ -19,7 +19,7 @@ const initialState = {
 
 function rootReducer(state = initialState, action) {
   switch (action.type) {
-    case ADD_TASK:
+    case ActionTypes.ADD_TASK:
       const newTask = {
         description: action.payload,
         completed: false
@@ -30,7 +30,7 @@ function rootReducer(state = initialState, action) {
         tasks: [...state.tasks, newTask]
       };
 
-    case COMPLETE_TASK:
+    case ActionTypes.COMPLETE_TASK:
       const task = state.tasks[action.payload];
 
       const updatedTask = Object.assign(task, {
@@ -44,7 +44,7 @@ function rootReducer(state = initialState, action) {
         tasks: taskList
       };
 
-    case DELETE_TASK:
+    case ActionTypes.DELETE_TASK:
       const updatedTasks = [...state.tasks];
 
       updatedTasks.splice(action.payload, 1);

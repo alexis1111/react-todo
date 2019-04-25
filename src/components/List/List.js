@@ -17,7 +17,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-class ListComponent extends Component {
+export class ListComponent extends Component {
   setTaskAction = (action, id) => {
     (action === 'complete') ? this.props.completeTask(id) : this.props.deleteTask(id);
   }
